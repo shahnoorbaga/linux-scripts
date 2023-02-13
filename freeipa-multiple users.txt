@@ -1,0 +1,19 @@
+#to add multiple users
+user-list.txt -> file containing user data
+awk '{print "echo ZUwHXUv7 | ipa user-add",$1," --first",$2," --last",$3," --email",$4,"--password --shell=/bin/bash"}' user-list.txt > /home/admin/add-user-idm.sh && /bin/chmod +x /home/admin/add-user-idm.sh && /bin/bash /home/admin/add-user-idm.sh
+
+#to add multiple users to a group
+awk '{print " ipa group-add-member mumbai --users="$1""}' mumbai.txt > /home/admin/add-user-idm.sh && /bin/chmod +x /home/admin/add-user-idm.sh && /bin/bash /home/admin/add-user-idm.sh
+
+#TO add multiple HBAc RUles
+awk '{print " ipa hbacrule-add "$1" --servicecat=all"}' hosts.txt > /home/admin/add-user-idm.sh && /bin/chmod +x /home/admin/add-user-idm.sh && /bin/bash /home/admin/add-user-idm.sh
+
+#To add hosts to existing HBAC rules
+awk '{print "ipa hbacrule-add-host "$1" --hosts="$1""}' host2.txt > /home/admin/add-user-idm.sh && /bin/chmod +x /home/admin/add-user-idm.sh && /bin/bash /home/admin/add-user-idm.sh
+
+#TO add users to existing HBAC rules
+awk '{print "ipa hbacrule-add-user "$3".domain.com --user="$1"."$2""}' user-tag2.txt > /home/admin/add-user-idm.sh && /bin/chmod +x /home/admin/add-user-idm.sh && /bin/bash /home/admin/add-user-idm.sh
+
+
+#to add description to existing HBAC rules
+awk '{print "ipa hbacrule-mod "$3".domain.com --desc="$1"."$2""}' user-tag2.txt > /home/admin/add-user-idm.sh && /bin/chmod +x /home/admin/add-user-idm.sh && /bin/bash /home/admin/add-user-idm.sh

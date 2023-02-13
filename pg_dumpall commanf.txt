@@ -1,0 +1,6 @@
+To dump all databases:
+
+$ pg_dumpall > db.out
+To reload database(s) from this file, you can use:
+
+$ psql -f db.out postgres

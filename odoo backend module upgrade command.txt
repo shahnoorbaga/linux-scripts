@@ -1,0 +1,2 @@
+./odoo-bin -d databse_name -u all --stop-after-init
+

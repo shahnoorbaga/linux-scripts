@@ -1,0 +1,1 @@
+openssl pkcs12 -export -out star.bistasolutions.com.p12 -inkey star.bistasolutions.com.key -in star.bistasolutions.com.crt -certfile star.bistasolutions.com.ca-bundle

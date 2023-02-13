@@ -1,0 +1,13 @@
+
+#To display security updates only.
+apt-get -s dist-upgrade| grep "^Inst" | grep -i security 
+
+#to display all upgradeable packages
+apt-get -s dist-upgrade | grep "^Inst"
+
+
+# to install security updates only
+apt-get -s dist-upgrade | grep "^Inst" | grep -i securi | awk -F " " {'print $2'} | xargs apt-get install -y
+
+#ansible script
+sudo apt-get -s dist-upgrade | sudo grep "^Inst" | sudo grep -i securi | sudo awk -F " " {'print $2'} | sudo xargs apt-get install -y

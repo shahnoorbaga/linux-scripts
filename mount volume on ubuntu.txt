@@ -1,0 +1,8 @@
+1) lsblk -f
+2) sudo mkfs -t xfs /dev/nvme1n1
+3) sudo mount /dev/nvme1n1 /home/odoo15/.local/share/Odoo
+4) sudo blkid
+5) UUID=c6c233c2-8df7-4b01-be16-de172a6cfeb6 /home/odoo15/.local/share/Odoo  xfs  defaults,nofail  0  2
+
+
+https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-using-volumes.html

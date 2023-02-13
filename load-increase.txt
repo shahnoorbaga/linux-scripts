@@ -1,0 +1,4 @@
+#install cpu-load-generator python library
+sudo pip3 install cpu-load-generator
+#to give 100% load for 200 seconds on all logical cores
+sudo /usr/bin/python3.6 -m  cpu_load_generator -l 1.0 -d 200 -c -1

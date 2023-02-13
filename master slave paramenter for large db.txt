@@ -1,0 +1,3 @@
+# /etc/postgresql/10/main/postgresql.conf on a slave
+max_standby_archive_delay = 9000s
+max_standby_streaming_delay = 9000s
